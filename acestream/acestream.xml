@@ -24,7 +24,7 @@ http://[YOUR IP]:8008/ace/getstream?id=[ACESTREAM id]</Overview>
   <Category>MediaServer:Video</Category>
   <WebUI/>
   <TemplateURL/>
-  <Icon>https://github.com/qubex22/unraid-templates/raw/main/acestream/acestream.png</Icon>
+  <Icon>https://raw.githubusercontent.com/qubex22/unraid-templates/main/acestream/acestream.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
