@@ -55,7 +55,7 @@ http://[YOUR IP]:8008/ace/getstream?id=[ACESTREAM id]</Description>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/acestream/</HostDir>
+      <HostDir>/mnt/user/appdata/acestream/cache/</HostDir>
       <ContainerDir>/srv/acestream/.ACEStream</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
