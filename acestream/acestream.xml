@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Acestream</Name>
+  <Repository>vstavrinov/acestream-service</Repository>
+  <Registry>https://hub.docker.com/r/vstavrinov/acestream-service</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/vstavrinov/acestream-service</Project>
+  <Overview>Acestream-engine&#xD;
+&#xD;
+To access it you can use the HTTP api as shown in their wiki:&#xD;
+https://wiki.acestream.media/Engine_HTTP_API&#xD;
+&#xD;
+For example in VLC:&#xD;
+http://[YOUR IP]:8008/ace/getstream?id=[ACESTREAM id]&#xD;
+&#xD;
+Also you can create an m3u list and integrate in Jellyfin Live TV with the m3u tuner:&#xD;
+#EXTM3U&#xD;
+#EXTINF:0,EXAMPLE&#xD;
+http://[YOUR IP]:8008/ace/getstream?id=[ACESTREAM id]</Overview>
+  <Category>MediaServer:Video</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://github.com/qubex22/unraid-templates/raw/main/acestream/acestream.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1641899855</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Acestream-engine&#xD;
+&#xD;
+To access it you can use the HTTP api as shown in their wiki:&#xD;
+https://wiki.acestream.media/Engine_HTTP_API&#xD;
+&#xD;
+For example in VLC:&#xD;
+http://[YOUR IP]:8008/ace/getstream?id=[ACESTREAM id]&#xD;
+&#xD;
+Also you can create an m3u list and integrate in Jellyfin Live TV with the m3u tuner:&#xD;
+#EXTM3U&#xD;
+#EXTINF:0,EXAMPLE&#xD;
+http://[YOUR IP]:8008/ace/getstream?id=[ACESTREAM id]</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8008</HostPort>
+        <ContainerPort>6878</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/acestream/</HostDir>
+      <ContainerDir>/srv/acestream/.ACEStream</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="acestream cache" Target="/srv/acestream/.ACEStream" Default="" Mode="rw" Description="Stream cache data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/acestream/</Config>
+  <Config Name="HOST PORT" Target="6878" Default="" Mode="tcp" Description="Redirect default engine port 6878" Type="Port" Display="always" Required="true" Mask="false">8008</Config>
+</Container>
