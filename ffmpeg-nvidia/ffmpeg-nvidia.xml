@@ -26,7 +26,7 @@ docker exec -i ffmpeg ffmpeg -i input.avi -c:v h264_nvenc -b:v 64k -bufsize 64k 
   <Description>Dockerized ffmpeg with nvidia HW support.&#xD;
 &#xD;
 How to run:&#xD;
-docker exec -i ffmpeg ffmpeg -i input.avi -c:v h264_nvenc -b:v 64k -bufsize 64k output.avi</Description>
+docker exec -i ffmpeg-nvidia ffmpeg -i input.avi -c:v h264_nvenc -b:v 64k -bufsize 64k output.avi</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish/>
