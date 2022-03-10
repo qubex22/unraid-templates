@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Elastiflow</Name>
+  <Repository>elastiflow/flow-collector:5.3.4</Repository>
+  <Registry/>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://www.elastiflow.com/</Project>
+  <Overview>ElastiFlow&#x2122; provides deep insights into your network traffic, for increased performance and security.&#xD;
+&#xD;
+Check the documentation of the project and modify the enviroment variables at your will.</Overview>
+  <Category>Network:Management</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/qubex22/unraid-templates/main/elastiflow/elastiflow.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1646913150</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>ElastiFlow&#x2122; provides deep insights into your network traffic, for increased performance and security.&#xD;
+&#xD;
+Check the documentation of the project and modify the enviroment variables at your will.</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9995</HostPort>
+        <ContainerPort>9995</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/elastiflow</HostDir>
+      <ContainerDir>/etc/elastiflow</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>0.0.0.0</Value>
+      <Name>EF_FLOW_SERVER_UDP_IP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>9995</Value>
+      <Name>EF_FLOW_SERVER_UDP_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>EF_FLOW_DECODER_ENRICH_IPADDR_METADATA_ENABLE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1.1.1.1</Value>
+      <Name>EF_FLOW_DECODER_ENRICH_DNS_NAMESERVER_IP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>3000</Value>
+      <Name>EF_FLOW_DECODER_ENRICH_DNS_NAMESERVER_TIMEOUT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>EF_FLOW_DECODER_ENRICH_MAXMIND_ASN_ENABLE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>EF_FLOW_DECODER_ENRICH_MAXMIND_GEOIP_ENABLE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>EF_FLOW_DECODER_ENRICH_RISKIQ_ASN_ENABLE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>EF_FLOW_DECODER_ENRICH_RISKIQ_THREAT_ENABLE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>EF_FLOW_OUTPUT_ELASTICSEARCH_ENABLE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>EF_FLOW_OUTPUT_ELASTICSEARCH_ECS_ENABLE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>EF_FLOW_OUTPUT_ELASTICSEARCH_INDEX_TEMPLATE_SHARDS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>EF_FLOW_OUTPUT_ELASTICSEARCH_INDEX_TEMPLATE_REPLICAS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>127.0.0.1:9200</Value>
+      <Name>EF_FLOW_OUTPUT_ELASTICSEARCH_ADDRESSES</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>EF_FLOW_OUTPUT_ELASTICSEARCH_TLS_ENABLE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>EF_FLOW_OUTPUT_ELASTICSEARCH_TLS_SKIP_VERIFICATION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>/etc/elastiflow/GeoLite2-City.mmdb</Value>
+      <Name>EF_FLOW_DECODER_ENRICH_MAXMIND_GEOIP_PATH</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Path 1" Target="/etc/elastiflow" Default="/mnt/user/appdata/elastiflow" Mode="rw" Description="Container Path: /etc/elastiflow" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/elastiflow</Config>
+  <Config Name="EF_FLOW_SERVER_UDP_IP" Target="EF_FLOW_SERVER_UDP_IP" Default="0.0.0.0" Mode="" Description="Container Variable: EF_FLOW_SERVER_UDP_IP" Type="Variable" Display="always" Required="true" Mask="false">0.0.0.0</Config>
+  <Config Name="EF_FLOW_SERVER_UDP_PORT" Target="EF_FLOW_SERVER_UDP_PORT" Default="9995" Mode="" Description="Container Variable: EF_FLOW_SERVER_UDP_PORT" Type="Variable" Display="always" Required="true" Mask="false">9995</Config>
+  <Config Name="EF_FLOW_DECODER_ENRICH_IPADDR_METADATA_ENABLE" Target="EF_FLOW_DECODER_ENRICH_IPADDR_METADATA_ENABLE" Default="" Mode="" Description="Container Variable: EF_FLOW_DECODER_ENRICH_IPADDR_METADATA_ENABLE" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="EF_FLOW_DECODER_ENRICH_DNS_NAMESERVER_IP" Target="EF_FLOW_DECODER_ENRICH_DNS_NAMESERVER_IP" Default="" Mode="" Description="Container Variable: EF_FLOW_DECODER_ENRICH_DNS_NAMESERVER_IP" Type="Variable" Display="always" Required="false" Mask="false">1.1.1.1</Config>
+  <Config Name="EF_FLOW_DECODER_ENRICH_DNS_NAMESERVER_TIMEOUT" Target="EF_FLOW_DECODER_ENRICH_DNS_NAMESERVER_TIMEOUT" Default="" Mode="" Description="Container Variable: EF_FLOW_DECODER_ENRICH_DNS_NAMESERVER_TIMEOUT" Type="Variable" Display="always" Required="false" Mask="false">3000</Config>
+  <Config Name="EF_FLOW_DECODER_ENRICH_MAXMIND_ASN_ENABLE" Target="EF_FLOW_DECODER_ENRICH_MAXMIND_ASN_ENABLE" Default="" Mode="" Description="Container Variable: EF_FLOW_DECODER_ENRICH_MAXMIND_ASN_ENABLE" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="EF_FLOW_DECODER_ENRICH_MAXMIND_GEOIP_ENABLE" Target="EF_FLOW_DECODER_ENRICH_MAXMIND_GEOIP_ENABLE" Default="" Mode="" Description="Container Variable: EF_FLOW_DECODER_ENRICH_MAXMIND_GEOIP_ENABLE" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="EF_FLOW_DECODER_ENRICH_RISKIQ_ASN_ENABLE" Target="EF_FLOW_DECODER_ENRICH_RISKIQ_ASN_ENABLE" Default="" Mode="" Description="Container Variable: EF_FLOW_DECODER_ENRICH_RISKIQ_ASN_ENABLE" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="EF_FLOW_DECODER_ENRICH_RISKIQ_THREAT_ENABLE" Target="EF_FLOW_DECODER_ENRICH_RISKIQ_THREAT_ENABLE" Default="" Mode="" Description="Container Variable: EF_FLOW_DECODER_ENRICH_RISKIQ_THREAT_ENABLE" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="EF_FLOW_OUTPUT_ELASTICSEARCH_ENABLE" Target="EF_FLOW_OUTPUT_ELASTICSEARCH_ENABLE" Default="" Mode="" Description="Container Variable: EF_FLOW_OUTPUT_ELASTICSEARCH_ENABLE" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="EF_FLOW_OUTPUT_ELASTICSEARCH_ECS_ENABLE" Target="EF_FLOW_OUTPUT_ELASTICSEARCH_ECS_ENABLE" Default="" Mode="" Description="Container Variable: EF_FLOW_OUTPUT_ELASTICSEARCH_ECS_ENABLE" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="EF_FLOW_OUTPUT_ELASTICSEARCH_INDEX_TEMPLATE_SHARDS" Target="EF_FLOW_OUTPUT_ELASTICSEARCH_INDEX_TEMPLATE_SHARDS" Default="" Mode="" Description="Container Variable: EF_FLOW_OUTPUT_ELASTICSEARCH_INDEX_TEMPLATE_SHARDS" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="EF_FLOW_OUTPUT_ELASTICSEARCH_INDEX_TEMPLATE_REPLICAS" Target="EF_FLOW_OUTPUT_ELASTICSEARCH_INDEX_TEMPLATE_REPLICAS" Default="" Mode="" Description="Container Variable: EF_FLOW_OUTPUT_ELASTICSEARCH_INDEX_TEMPLATE_REPLICAS" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="EF_FLOW_OUTPUT_ELASTICSEARCH_ADDRESSES" Target="EF_FLOW_OUTPUT_ELASTICSEARCH_ADDRESSES" Default="" Mode="" Description="Container Variable: EF_FLOW_OUTPUT_ELASTICSEARCH_ADDRESSES" Type="Variable" Display="always" Required="false" Mask="false">127.0.0.1:9200</Config>
+  <Config Name="EF_FLOW_OUTPUT_ELASTICSEARCH_TLS_ENABLE" Target="EF_FLOW_OUTPUT_ELASTICSEARCH_TLS_ENABLE" Default="" Mode="" Description="Container Variable: EF_FLOW_OUTPUT_ELASTICSEARCH_TLS_ENABLE" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="EF_FLOW_OUTPUT_ELASTICSEARCH_TLS_SKIP_VERIFICATION" Target="EF_FLOW_OUTPUT_ELASTICSEARCH_TLS_SKIP_VERIFICATION" Default="" Mode="" Description="Container Variable: EF_FLOW_OUTPUT_ELASTICSEARCH_TLS_SKIP_VERIFICATION" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Host Port 1" Target="9995" Default="9995" Mode="udp" Description="Container Port: 9995" Type="Port" Display="always" Required="false" Mask="false">9995</Config>
+  <Config Name="EF_FLOW_DECODER_ENRICH_MAXMIND_GEOIP_PATH" Target="EF_FLOW_DECODER_ENRICH_MAXMIND_GEOIP_PATH" Default="" Mode="" Description="Container Variable: EF_FLOW_DECODER_ENRICH_MAXMIND_GEOIP_PATH" Type="Variable" Display="always" Required="false" Mask="false">/etc/elastiflow/GeoLite2-City.mmdb</Config>
+</Container>
