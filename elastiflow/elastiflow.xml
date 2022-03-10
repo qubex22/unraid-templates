@@ -74,7 +74,7 @@ Check the documentation of the project and modify the enviroment variables at yo
       <Mode/>
     </Variable>
     <Variable>
-      <Value>true</Value>
+      <Value>false</Value>
       <Name>EF_FLOW_DECODER_ENRICH_MAXMIND_GEOIP_ENABLE</Name>
       <Mode/>
     </Variable>
