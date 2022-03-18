@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>ffmpeg-nvidia</Name>
-  <Repository>jrottenberg/ffmpeg:4.1-nvidia</Repository>
+  <Repository>jrottenberg/ffmpeg:4.2-nvidia</Repository>
   <Registry>https://hub.docker.com/r/jrottenberg/ffmpeg</Registry>
   <Network>bridge</Network>
   <MyIP/>
@@ -12,21 +12,21 @@
   <Overview>Dockerized ffmpeg with nvidia HW support.&#xD;
 &#xD;
 How to run:&#xD;
-docker exec -i ffmpeg ffmpeg -i input.avi -c:v h264_nvenc -b:v 64k -bufsize 64k output.avi</Overview>
-  <Category>Tools:</Category>
+docker exec -i ffmpeg-nvidia ffmpeg -i input.avi -c:v h264_nvenc output.avi</Overview>
+  <Category>Tools:Utilities</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/qubex22/unraid-templates/master/ffmpeg-nvidia/ffmpeg-nvidia.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/qubex22/unraid-templates/main/ffmpeg-nvidia/ffmpeg.png</Icon>
-  <ExtraParams>-it --entrypoint bash --runtime=nvidia</ExtraParams>
+  <ExtraParams>-ti --entrypoint bash --runtime=nvidia</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1641901658</DateInstalled>
+  <DateInstalled>1647628411</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Dockerized ffmpeg with nvidia HW support.&#xD;
 &#xD;
 How to run:&#xD;
-docker exec -i ffmpeg-nvidia ffmpeg -i input.avi -c:v h264_nvenc -b:v 64k -bufsize 64k output.avi</Description>
+docker exec -i ffmpeg-nvidia ffmpeg -i input.avi -c:v h264_nvenc output.avi</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish/>
