@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Acestream</Name>
-  <Repository>vstavrinov/acestream-service</Repository>
-  <Registry>https://hub.docker.com/r/vstavrinov/acestream-service</Registry>
+  <Repository>vstavrinov/acestream-engine</Repository>
+  <Registry>https://hub.docker.com/r/vstavrinov/acestream-engine</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support/>
-  <Project>https://github.com/vstavrinov/acestream-service</Project>
+  <Project>https://github.com/vstavrinov/acestream-engine</Project>
   <Overview>Acestream-engine&#xD;
 &#xD;
 To access it you can use the HTTP api as shown in their wiki:&#xD;
@@ -55,13 +55,13 @@ http://[YOUR IP]:8008/ace/getstream?id=[ACESTREAM id]</Description>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/acestream/cache/</HostDir>
-      <ContainerDir>/srv/acestream/.ACEStream</ContainerDir>
+      <HostDir>/mnt/user/appdata/acestream/</HostDir>
+      <ContainerDir>/srv/ace/.ACEStream</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment/>
   <Labels/>
-  <Config Name="acestream cache" Target="/srv/acestream/.ACEStream" Default="" Mode="rw" Description="Stream cache data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/acestream/</Config>
+  <Config Name="acestream cache" Target="/srv/ace/.ACEStream" Default="" Mode="rw" Description="Stream cache data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/acestream/</Config>
   <Config Name="HOST PORT" Target="6878" Default="" Mode="tcp" Description="Redirect default engine port 6878" Type="Port" Display="always" Required="true" Mask="false">8008</Config>
 </Container>
